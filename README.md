@@ -1,5 +1,5 @@
 # RSS Feed to Instapaper
-[![CodeQL](https://github.com/daniel-luke/rss-feed-to-instapaper/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/daniel-luke/rss-feed-to-instapaper/actions/workflows/github-code-scanning/codeql) [![Build and push Docker image](https://github.com/daniel-luke/rss-feed-to-instapaper/actions/workflows/docker.yml/badge.svg)](https://github.com/daniel-luke/rss-feed-to-instapaper/actions/workflows/docker.yml)
+[![CodeQL](https://github.com/thebighouselabs/rss-feed-to-instapaper/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/thebighouselabs/rss-feed-to-instapaper/actions/workflows/github-code-scanning/codeql) [![Build and push Docker image](https://github.com/dthebighouselabs/rss-feed-to-instapaper/actions/workflows/docker.yml/badge.svg)](https://github.com/daniel-luke/rss-feed-to-instapaper/actions/workflows/docker.yml)
 
 Automatically sync RSS and Atom feeds to your [Instapaper](https://www.instapaper.com/) reading list. New articles are added on a schedule, old articles are archived, and optionally deleted after a set number of days — so your reading list stays clean without any manual effort.
 
@@ -29,7 +29,7 @@ Built with Kobo e-reader users in mind: if you use Instapaper's native Kobo inte
 Clone this repository or download `docker-compose.yml`, `config.example.yaml`, and `.env.example`:
 
 ```bash
-git clone https://github.com/thebighousenl/rss-feed-to-instapaper.git
+git clone https://github.com/thebighouselabs/rss-feed-to-instapaper.git
 cd rss-feed-to-instapaper
 ```
 
