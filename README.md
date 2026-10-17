@@ -11,8 +11,10 @@ Built with Kobo e-reader users in mind: if you use Instapaper's native Kobo inte
 - **Newest-first ordering** — articles are added in publication-date order so the latest appears at the top of your Instapaper list
 - **Auto-archive** — articles older than a configurable number of days are automatically archived in Instapaper
 - **Auto-delete archived articles** — optionally remove archived articles from Instapaper entirely after a set number of days, or immediately on every sync
+- **Title filtering** — include or exclude articles per feed using keywords or regular expressions
+- **Per-feed settings** — pause individual feeds, or override the archive and retention windows per feed
 - **Duplicate prevention** — state is persisted between runs; articles are never added twice
-- **Docker and Kubernetes support** — deploy anywhere with minimal configuration
+- **Docker and Kubernetes support** — prebuilt images on GitHub Container Registry; deploy anywhere with minimal configuration
 
 ## Prerequisites
 
@@ -66,6 +68,8 @@ Edit `config.yaml` — see [Configuration](#configuration) for all options.
 ```bash
 docker compose up -d
 ```
+
+This pulls the prebuilt image `ghcr.io/thebighouselabs/rss-feed-to-instapaper:latest`. To build the image from source instead, run `docker compose up -d --build`.
 
 Check that it's running:
 
@@ -167,7 +171,7 @@ All feed and sync behavior is configured in `config.yaml`.
 | `max_initial_items` | integer | *(disabled)* | If set, caps how many articles are added on the first sync of a feed. Prevents floods when adding a new feed with a large backlog |
 | `archive_retention_days` | integer | *(disabled)* | If set, archived articles are permanently deleted from Instapaper after this many days |
 | `clear_archive_on_sync` | boolean | `false` | If `true`, deletes all articles from your Instapaper archive on every sync — including articles archived manually or outside the syncer. Overrides `archive_retention_days` |
-| `sort_by_date` | boolean | `true` | When `true`, articles are added newest-first. Set to `false` to add in feed order |
+| `disable_date_sort` | boolean | `false` | Articles are added newest-first by default. Set to `true` to add them in feed order instead |
 | `feeds` | list | *(required)* | List of RSS/Atom feeds to sync |
 | `feeds[].url` | string | *(required)* | URL of the RSS or Atom feed |
 | `feeds[].label` | string | *(optional)* | Label to apply to articles added from this feed in Instapaper |
@@ -189,7 +193,7 @@ Per-feed overrides notes:
 max_age_days: 7
 max_initial_items: 10
 archive_retention_days: 30
-# sort_by_date: false  # uncomment to add in feed order instead of newest-first
+# disable_date_sort: true  # uncomment to add in feed order instead of newest-first
 
 feeds:
   - url: "https://example.com/feed.xml"
@@ -214,3 +218,13 @@ feeds:
 | `SYNC_SCHEDULE` | No | Sync schedule in [ofelia/cron syntax](https://pkg.go.dev/github.com/robfig/cron). Default: `@every 5m`. Examples: `@every 15m`, `0 */2 * * *` |
 
 > **Kubernetes:** `SYNC_SCHEDULE` is not used in the Kubernetes setup. Edit the `schedule` field in `manifests/cronjob.yaml` instead.
+
+---
+
+## Security
+
+To report a vulnerability, see [SECURITY.md](SECURITY.md).
+
+## License
+
+[MIT](LICENSE)
