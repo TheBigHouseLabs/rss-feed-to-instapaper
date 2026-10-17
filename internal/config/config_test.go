@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/config"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/config"
 )
 
 func TestLoad_valid(t *testing.T) {

@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/feed"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/feed"
 )
 
 const sampleRSS = `<?xml version="1.0" encoding="UTF-8"?>
