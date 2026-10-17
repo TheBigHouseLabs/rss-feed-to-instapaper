@@ -3,7 +3,7 @@ package state_test
 import (
 	"testing"
 
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/state"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/state"
 )
 
 func TestDB_IsSent_MarkSent(t *testing.T) {

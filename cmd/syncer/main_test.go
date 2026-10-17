@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/config"
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/feed"
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/state"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/config"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/feed"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/state"
 )
 
 func TestSortPending_order(t *testing.T) {

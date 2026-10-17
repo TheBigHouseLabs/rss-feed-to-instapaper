@@ -1,4 +1,4 @@
-module github.com/danielgroothuis/rss-feed-to-instapaper
+module github.com/thebighouselabs/rss-feed-to-instapaper
 
 go 1.25.0
 

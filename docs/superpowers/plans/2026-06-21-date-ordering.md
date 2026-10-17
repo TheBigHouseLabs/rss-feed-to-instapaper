@@ -10,7 +10,7 @@
 
 ## Global Constraints
 
-- Module: `github.com/danielgroothuis/rss-feed-to-instapaper`
+- Module: `github.com/thebighouselabs/rss-feed-to-instapaper`
 - Go 1.23, CGO_ENABLED=1 required (mattn/go-sqlite3 in other packages)
 - No new dependencies
 - Run all tests with: `go test ./...`
@@ -362,7 +362,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/feed"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/feed"
 )
 
 func TestSortPending_order(t *testing.T) {
@@ -424,10 +424,10 @@ import (
 	"os"
 	"sort"
 
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/config"
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/feed"
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/instapaper"
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/state"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/config"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/feed"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/instapaper"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/state"
 )
 
 type pendingItem struct {

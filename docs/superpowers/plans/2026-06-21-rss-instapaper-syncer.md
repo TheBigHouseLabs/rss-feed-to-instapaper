@@ -10,7 +10,7 @@
 
 ## Global Constraints
 
-- Module name: `github.com/danielgroothuis/rss-feed-to-instapaper`
+- Module name: `github.com/thebighouselabs/rss-feed-to-instapaper`
 - Go version: 1.23
 - CGO required for go-sqlite3 — do not use `CGO_ENABLED=0`
 - Config file path default: `/config/config.yaml` (overridable via `CONFIG_PATH` env var)
@@ -50,16 +50,16 @@
 - Create: `go.mod`
 
 **Interfaces:**
-- Produces: module `github.com/danielgroothuis/rss-feed-to-instapaper` available for all internal packages
+- Produces: module `github.com/thebighouselabs/rss-feed-to-instapaper` available for all internal packages
 
 - [ ] **Step 1: Initialize Go module**
 
 ```bash
 cd /path/to/rss-feed-to-instapaper
-go mod init github.com/danielgroothuis/rss-feed-to-instapaper
+go mod init github.com/thebighouselabs/rss-feed-to-instapaper
 ```
 
-Expected: `go.mod` created with `module github.com/danielgroothuis/rss-feed-to-instapaper` and `go 1.23`
+Expected: `go.mod` created with `module github.com/thebighouselabs/rss-feed-to-instapaper` and `go 1.23`
 
 - [ ] **Step 2: Add dependencies**
 
@@ -112,7 +112,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/config"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/config"
 )
 
 func TestLoad_valid(t *testing.T) {
@@ -176,7 +176,7 @@ func TestLoad_feed_missing_url(t *testing.T) {
 go test ./internal/config/...
 ```
 
-Expected: compile error `cannot find package "github.com/danielgroothuis/rss-feed-to-instapaper/internal/config"`
+Expected: compile error `cannot find package "github.com/thebighouselabs/rss-feed-to-instapaper/internal/config"`
 
 - [ ] **Step 3: Implement config package**
 
@@ -264,7 +264,7 @@ package state_test
 import (
 	"testing"
 
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/state"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/state"
 )
 
 func TestDB_IsSent_MarkSent(t *testing.T) {
@@ -431,7 +431,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/feed"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/feed"
 )
 
 const sampleRSS = `<?xml version="1.0" encoding="UTF-8"?>
@@ -806,10 +806,10 @@ import (
 	"log"
 	"os"
 
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/config"
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/feed"
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/instapaper"
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/state"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/config"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/feed"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/instapaper"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/state"
 )
 
 func main() {

@@ -10,7 +10,7 @@
 
 ## Global Constraints
 
-- Module: `github.com/danielgroothuis/rss-feed-to-instapaper`
+- Module: `github.com/thebighouselabs/rss-feed-to-instapaper`
 - CGO required — never `CGO_ENABLED=0` (mattn/go-sqlite3)
 - Test command: `go test ./...` from repo root
 - No new dependencies — stdlib only for OAuth (no external OAuth library)
@@ -1040,10 +1040,10 @@ import (
 	"log"
 	"os"
 
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/config"
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/feed"
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/instapaper"
-	"github.com/danielgroothuis/rss-feed-to-instapaper/internal/state"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/config"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/feed"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/instapaper"
+	"github.com/thebighouselabs/rss-feed-to-instapaper/internal/state"
 )
 
 func main() {
